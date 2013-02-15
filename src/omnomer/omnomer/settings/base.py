@@ -1,6 +1,18 @@
 # Django settings for omnomer project.
-
+import os
 from unipath import Path
+
+# Normally you should not import ANYTHING from Django directly
+# into your settings, but ImproperlyConfigured is an exception.
+from django.core.exceptions import ImproperlyConfigured
+
+def get_env_variable(var_name):
+    """ Get the environment variable or return exception """
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_msg = "Set the %s env variable" % var_name
+        raise ImproperlyConfigured(error_msg)
 
 PROJECT_ROOT = Path(__file__).ancestor(3)
 
@@ -91,7 +103,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'g=9t#p+!q1@t6678s518jv1nv3n1o^8k*-c#f^ahzz)1sx=uee'
+SECRET_KEY = get_env_variable("OMNOMER_KEY")
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
