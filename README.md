@@ -1,7 +1,10 @@
 # Omnomer
-## All your stuff is belong to you
-
+### All your stuff is belong to you
+***
 Omnomer is an inventory system built in Django.
+
+Pre-requisites:
+* A local postgres install. On a mac [PostgresApp](http://postgresapp.com/) is highly recommended and has pretty good docs.
 
 To get started:
 
