@@ -6,7 +6,7 @@ TEAMPLATE_DEBUG = DEBUG
 
 DATABASES = {
 	'default': {
-		'ENGINGE': 'django.db.backends.postgresql_psycopg2',
+		'ENGINE': 'django.db.backends.postgresql_psycopg2',
 		'NAME': 'omnomer',
 		'USER': '',
 		'PASSWORD': '',
