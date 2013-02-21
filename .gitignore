@@ -1,6 +1,7 @@
+*.pyc
+
 # Virtualenv folders
 bin/
 lib/
 include/
 
-*.pyc
