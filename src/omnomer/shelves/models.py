@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+# class Shelf(models.Model):
+
+	# id
+	# owners
+	# items
+	# name
+	# date added 
+	# date changed
+	# pictures
+
+
