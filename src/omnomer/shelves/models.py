@@ -1,13 +1,14 @@
 from django.db import models
 
-# class Shelf(models.Model):
+from model_utils import TimeStampedModel
 
+class Shelf(TimeStampedModel):
+
+	#TODO:
 	# id
 	# owners
 	# items
 	# name
-	# date added 
-	# date changed
 	# pictures
 
 

@@ -1,12 +1,13 @@
 from django.db import models
 
-# class Item(models.Model):
+from model_utils import TimeStampedModel
 
+class Item(TimeStampedModel):
+
+	#TODO:
 	# id
 	# name
 	# barcode
-	# date added
-	# date changed
 	# users it belongs to (many-to-many)
 	# location (geotag?) (overriden by shelf?)
 	# value
