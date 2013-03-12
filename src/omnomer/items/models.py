@@ -1,8 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-from model_utils import TimeStampedModel
+from model_utils.models import TimeStampedModel
 
 class Item(TimeStampedModel):
+
+	owners = models.ManyToManyField(User)
+	name = models.CharField(max_length=140)
+
 
 	#TODO:
 	# id
