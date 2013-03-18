@@ -20,14 +20,25 @@ To get started:
 
 Full setup details (Mac):
 1. Download [PostgresApp](http://postgresapp.com/) and go through the install.
+
 2. Open the postgres app (an elephant icon should appear in the menubar)
+
 3. Click the postgres menubar icon. Select psql.
+
 4. At the psql prompt, enter "CREATE DATABAE omnomer;". This will create the omnomer db
+
 5. Exit psql
+
 6. Clone the repo to the location of your choice.
+
 7. Create a virtualenv around the repo (virtualenv .)
+
 8. Activate the virtualenv (source bin/activate)
+
 9. Install dependencies (pip install -r requirements/local.txt)
+
 10. Get the secret key from one of the project maintainers or create your own; set that key in an environment variable (export OMNOMER_KEY=...)
+
 11. Cd into the omnomer directory (omnomer/src/omnomer)
+
 12. Attempt to sync the db (python manage.py settings=omnomer.settings.local)
