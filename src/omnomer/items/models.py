@@ -10,10 +10,7 @@ class Item(TimeStampedModel):
 
 
 	#TODO:
-	# id
-	# name
 	# barcode
-	# users it belongs to (many-to-many)
 	# location (geotag?) (overriden by shelf?)
 	# value
 	# purchase date

@@ -9,11 +9,8 @@ class Shelf(TimeStampedModel):
 	owners = models.ManyToManyField(User)
 	name = models.CharField(max_length=140)
 	items = models.ManyToManyField(Item)
+	
 	#TODO:
-	# id
-	# owners
-	# items
-	# name
 	# pictures
 
 
