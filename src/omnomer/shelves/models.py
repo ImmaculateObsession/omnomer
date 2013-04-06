@@ -6,11 +6,11 @@ from items.models import Item
 
 class Shelf(TimeStampedModel):
 
-	owners = models.ManyToManyField(User)
-	name = models.CharField(max_length=140)
-	items = models.ManyToManyField(Item)
-	
-	#TODO:
-	# pictures
+    owners = models.ManyToManyField(User)
+    name = models.CharField(max_length=140)
+    items = models.ManyToManyField(Item)
+    
+    #TODO:
+    # pictures
 
 
