@@ -135,6 +135,7 @@ WSGI_APPLICATION = 'omnomer.wsgi.application'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
+    'django_browserid',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -147,6 +148,21 @@ INSTALLED_APPS = (
     'south',
     'items',
     'shelves',
+)
+
+AUTHENTICATION_BACKENDS = (
+    'django_browserid.auth.BrowserIDBackend',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    'django_browserid.context_processors.browserid',
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages"
 )
 
 # A sample logging configuration. The only tangible logging

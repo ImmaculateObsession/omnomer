@@ -5,17 +5,18 @@ DEBUG = True
 TEAMPLATE_DEBUG = DEBUG
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'omnomer',
-		'USER': '',
-		'PASSWORD': '',
-		'HOST': 'localhost',
-		'PORT': '',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'omnomer',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 INSTALLED_APPS += ('debug_toolbar', )
 INTERNAL_IPS = ('127.0.0.1',)
-MIDDLEWARE_CLASSES += \
-            ('debug_toolbar.middleware.DebugToolbarMiddleware', )
+MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware', )
+
+SITE_URL = 'http://localhost:8000'

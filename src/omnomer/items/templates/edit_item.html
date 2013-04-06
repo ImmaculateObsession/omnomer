@@ -1,3 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if item.id %} 
+        Edit Item - Omnomer
+    {% else %}
+        Add Item - Omnomer
+    {% endif %}
+{% endblock %}
+
+{% block content %}
 {% if item.id %}
 <h1>Edit Item</h1>
 {% else %}
@@ -17,3 +28,4 @@
 {% endif %}
 
 <a href="{% url "items-list" %}">back to list</a>
+{% endblock %}
