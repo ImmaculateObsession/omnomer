@@ -1,0 +1,10 @@
+<h1>Items</h1>
+
+<ul>
+  {% for item in object_list %}
+    <li><a href="{{ item.get_absolute_url }}">{{ item }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="{% url "item-create" %}">add item</a>
