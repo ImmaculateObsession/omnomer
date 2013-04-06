@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+{% load browserid %}
+<html>
+    <head>
+            <title> {% block title %} Omnomer {% endblock title %}</title>
+    </head>
+    <body>
+        {% browserid_info %}
+        <header>
+            <div class="authentication">
+            {% if user.is_authenticated %}
+                {% browserid_logout text='Logout' %}
+            {% else %}
+                {% browserid_login text='Login' %}
+            {% endif %}
+            </div>
+        </header>
+        {% block content %}
+            Hello!
+        {% endblock %}
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    {% browserid_js %}
+    </body>
+</html>
