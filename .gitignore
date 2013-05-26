@@ -1,8 +1,10 @@
 *.pyc
+build/
 
 # Virtualenv folders
 bin/
 lib/
 include/
+.Python/
 .Python
 
