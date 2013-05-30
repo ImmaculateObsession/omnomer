@@ -25,7 +25,7 @@ Full setup details (Mac):
 
 3. Click the postgres menubar icon. Select psql.
 
-4. At the psql prompt, enter "CREATE DATABAsE omnomer;". This will create the omnomer db
+4. At the psql prompt, enter "CREATE DATABASE omnomer;". This will create the omnomer db
 
 5. Exit psql
 
