@@ -12,7 +12,7 @@ To get started:
 
 2. Create a virtualenv around the cloned repo
 
-3. Install requirements using 'pip install -r rquirements.txt'
+3. Install requirements using 'pip install -r requirements.txt'
 
 4. Get the secret keys from one of the project maintainers.
 
@@ -25,7 +25,7 @@ Full setup details (Mac):
 
 3. Click the postgres menubar icon. Select psql.
 
-4. At the psql prompt, enter "CREATE DATABAE omnomer;". This will create the omnomer db
+4. At the psql prompt, enter "CREATE DATABAsE omnomer;". This will create the omnomer db
 
 5. Exit psql
 
@@ -33,7 +33,7 @@ Full setup details (Mac):
 
 7. Create a virtualenv around the repo (virtualenv .)
 
-8. Activate the virtualenv (source bin/activate)
+8. Activate the virtualenv (. bin/activate)
 
 9. Install dependencies (pip install -r requirements/local.txt)
 
