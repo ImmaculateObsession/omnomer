@@ -37,7 +37,7 @@ Full setup details (Mac):
 
 9. Install dependencies (pip install -r requirements/local.txt)
 
-10. Get the secret key from one of the project maintainers or create your own; set that key in an environment variable (export OMNOMER_KEY=...)
+10. Get the secret key from one of the project maintainers or create your own; set that key in an environment variable (export OMNOMER_KEY=...) - not necessary if you are using local settings.
 
 11. Cd into the omnomer directory (omnomer/src/omnomer)
 
