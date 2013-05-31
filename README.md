@@ -41,4 +41,4 @@ Full setup details (Mac):
 
 11. Cd into the omnomer directory (omnomer/src/omnomer)
 
-12. Attempt to sync the db (python manage.py settings=omnomer.settings.local)
+12. Attempt to sync the db (python manage.py syncdb --settings=omnomer.settings.local)
