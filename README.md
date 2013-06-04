@@ -1,5 +1,5 @@
 # Omnomer
-### All your stuff is belong to you
+### All your stuff belongs to you
 ***
 Omnomer is an inventory system built in Django.
 
