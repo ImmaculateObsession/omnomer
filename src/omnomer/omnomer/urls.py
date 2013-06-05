@@ -16,6 +16,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'omnomer.views.home', name='home'),
     url(r'^items/', include(item_urls)),
     url(r'^shelves/', include(shelf_urls)),
 )

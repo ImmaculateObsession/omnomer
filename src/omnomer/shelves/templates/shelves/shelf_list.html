@@ -1,0 +1,15 @@
+{% extends "shelves/shelf_base.html" %}
+{%  block title %}Omnomer - Delet Shelf{% endblock %}
+{%  block main %}
+    <h1>Shelves</h1>
+
+    <ul>
+      {% for shelf in object_list %}
+        <li><a href="{{ shelf.get_absolute_url }}">{{ shelf }}</a>
+            (<a href="{% url "shelf-edit" pk=shelf.id %}">edit</a>)
+        </li>
+      {% endfor %}
+    </ul>
+
+    <a href="{% url "shelf-create" %}">add shelf</a>
+{%  endblock %}

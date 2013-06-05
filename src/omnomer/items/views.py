@@ -9,17 +9,18 @@ from django.views.generic import (
 
 from items.models import Item
 
+template_dir = "items/"
 
 class ListItemView(ListView):
 
     model = Item
-    template_name = "item_list.html"
+    template_name = template_dir + "item_list.html"
 
 
 class CreateItemView(CreateView):
 
     model = Item
-    template_name = "edit_item.html"
+    template_name = template_dir + "edit_item.html"
 
     def get_success_url(self):
         return reverse('items-list')
@@ -34,7 +35,7 @@ class CreateItemView(CreateView):
 class EditItemView(UpdateView):
 
     model = Item
-    template_name = 'edit_item.html'
+    template_name = template_dir + 'edit_item.html'
 
     def get_success_url(self):
         return reverse('items-list')
@@ -49,7 +50,7 @@ class EditItemView(UpdateView):
 class DeleteItemView(DeleteView):
 
     model = Item
-    template_name = 'item_delete.html'
+    template_name = template_dir + 'item_delete.html'
 
     def get_success_url(self):
         return reverse('items-list')
