@@ -1,13 +1,27 @@
 <!DOCTYPE html>
+{#{% load browserid %}#}
 <html>
-<head>
-{% load staticfiles %}
-    <title>{% block title %}Omnomer - Snap, Tag, Organize{% endblock %}</title>
-    <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css">
-</head>
-<body>
-<div id="header_div">{% block header %}{% include "base/header.html" %}{% endblock %}</div>
-<div id="main_div">{% block main %}{% endblock %}</div>
-<div id="footer_div">{% block footer %}{% include "base/footer.html" %}{% endblock %}</div>
-</body>
+    <head>
+        {% load staticfiles %}
+        <title>{% block title %}Omnomer - Snap, Tag, Organize{% endblock %}</title>
+        <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css">
+    </head>
+    <body>
+{#        {% browserid_info %}#}
+{#        <header>#}
+{#            <div class="authentication">#}
+{#            {% if user.is_authenticated %}#}
+{#                {% browserid_logout text='Logout' %}#}
+{#            {% else %}#}
+{#                {% browserid_login text='Login' %}#}
+{#            {% endif %}#}
+{#            </div>#}
+{#        </header>#}
+        <div id="header_div">{% block header %}{% include "base/header.html" %}{% endblock %}</div>
+        <div id="main_div">{% block main %}{% endblock %}</div>
+        <div id="footer_div">{% block footer %}{% include "base/footer.html" %}{% endblock %}</div>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+{#        {% browserid_js %}#}
+    </body>
 </html>

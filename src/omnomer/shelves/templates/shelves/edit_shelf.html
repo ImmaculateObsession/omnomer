@@ -1,19 +1,23 @@
-{% if shelf.id %}
-<h1>Edit Shelf</h1>
-{% else %}
-<h1>Add Shelf</h1>
-{% endif %}
+{% extends "shelves/shelf_base.html" %}
+{%  block title %}Omnomer - Delet Shelf{% endblock %}
+{%  block main %}
+    {% if shelf.id %}
+        <h1>Edit Shelf</h1>
+    {% else %}
+        <h1>Add Shelf</h1>
+    {% endif %}
 
-<form action="{{ action }}" method="POST">
-  {% csrf_token %}
-  <ul>
-    {{ form.as_ul }}
-  </ul>
-  <input type="submit" value="Save" />
-</form>
+    <form action="{{ action }}" method="POST">
+        {% csrf_token %}
+        <ul>
+            {{ form.as_ul }}
+        </ul>
+        <input type="submit" value="Save" />
+    </form>
 
-{% if shelf.id %}
-<a href="{% url "shelf-delete" pk=shelf.id %}">Delete</a>
-{% endif %}
+    {% if shelf.id %}
+        <a href="{% url "shelf-delete" pk=shelf.id %}">Delete</a>
+    {% endif %}
 
-<a href="{% url "shelves-list" %}">back to list</a>
+    <a href="{% url "shelves-list" %}">back to list</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+/* Color hashs for reference
+ * #CADDAC - omnomer cream-mixed-green
+ * #EDEDED - grey cream
+ * #7FC003 - omnomer neon green
+ */
+
+body {
+    background-color: #EDEDED;
+    color: black;
+}
+#main_div{
+    background-color: #CADDAC;
+    color: black;
+}

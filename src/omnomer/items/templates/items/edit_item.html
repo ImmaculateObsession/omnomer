@@ -1,19 +1,23 @@
-{% if item.id %}
-<h1>Edit Item</h1>
-{% else %}
-<h1>Add Item</h1>
-{% endif %}
+{% extends "items/item_base.html" %}
+{%  block title %}Omnomer - Edit Item{% endblock %}
+{%  block main %}
+    {% if item.id %}
+        <h1>Edit Item</h1>
+    {% else %}
+        <h1>Add Item</h1>
+    {% endif %}
 
-<form action="{{ action }}" method="POST">
-  {% csrf_token %}
-  <ul>
-    {{ form.as_ul }}
-  </ul>
-  <input type="submit" value="Save" />
-</form>
+    <form action="{{ action }}" method="POST">
+        {% csrf_token %}
+        <ul>
+            {{ form.as_ul }}
+        </ul>
+        <input type="submit" value="Save" />
+    </form>
 
-{% if item.id %}
-<a href="{% url "item-delete" pk=item.id %}">Delete</a>
-{% endif %}
+    {% if item.id %}
+        <a href="{% url "item-delete" pk=item.id %}">Delete</a>
+    {% endif %}
 
-<a href="{% url "items-list" %}">back to list</a>
+    <a href="{% url "items-list" %}">back to list</a>
+{% endblock %}

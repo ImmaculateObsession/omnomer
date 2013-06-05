@@ -9,17 +9,18 @@ from django.views.generic import (
 
 from shelves.models import Shelf
 
+template_dir = "shelves/"
 
 class ListShelfView(ListView):
 
     model = Shelf
-    template_name = "shelf_list.html"
+    template_name = template_dir + "shelf_list.html"
 
 
 class CreateShelfView(CreateView):
 
     model = Shelf
-    template_name = "edit_shelf.html"
+    template_name = template_dir + "edit_shelf.html"
 
     def get_success_url(self):
         return reverse('shelf-list')
@@ -34,7 +35,7 @@ class CreateShelfView(CreateView):
 class EditShelfView(UpdateView):
 
     model = Shelf
-    template_name = 'edit_shelf.html'
+    template_name = template_dir + 'edit_shelf.html'
 
     def get_success_url(self):
         return reverse('shelves-list')
@@ -49,7 +50,7 @@ class EditShelfView(UpdateView):
 class DeleteShelfView(DeleteView):
 
     model = Shelf
-    template_name = 'shelf_delete.html'
+    template_name = template_dir + 'shelf_delete.html'
 
     def get_success_url(self):
         return reverse('shelf-list')

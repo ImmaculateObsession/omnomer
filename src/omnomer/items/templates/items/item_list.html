@@ -1,11 +1,15 @@
-<h1>Items</h1>
+{% extends "items/item_base.html" %}
+{%  block title %}Omnomer - Item List{% endblock %}
+{%  block main %}
+    <h1>Items</h1>
 
-<ul>
-  {% for item in object_list %}
-    <li><a href="{{ item.get_absolute_url }}">{{ item }}</a>
-        (<a href="{% url "item-edit" pk=item.id %}">edit</a>)
-    </li>
-  {% endfor %}
-</ul>
+    <ul>
+      {% for item in object_list %}
+        <li><a href="{{ item.get_absolute_url }}">{{ item }}</a>
+            (<a href="{% url "item-edit" pk=item.id %}">edit</a>)
+        </li>
+      {% endfor %}
+    </ul>
 
-<a href="{% url "item-create" %}">add item</a>
+    <a href="{% url "item-create" %}">add item</a>
+{% endblock %}

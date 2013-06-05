@@ -17,12 +17,14 @@ def get_env_variable(var_name):
 PROJECT_ROOT = Path(__file__).ancestor(3)
 
 MEDIA_ROOT = MEDIA_ROOT = PROJECT_ROOT.child('media')
-STATIC_ROOT = PROJECT_ROOT.child('static')
+STATIC_ROOT = PROJECT_ROOT.child('static-collected')
 STATICFILES_DIRS = (
     PROJECT_ROOT.child('assets'),
 )
 TEMPLATE_DIRS = (
-    PROJECT_ROOT.child('templates'),
+    PROJECT_ROOT.child('templates'), # base templates to build off
+    PROJECT_ROOT.child("items").child('templates'), # templates for items
+    PROJECT_ROOT.child("shelves").child('templates'), # templates for shelves
 )
 
 DEBUG = True

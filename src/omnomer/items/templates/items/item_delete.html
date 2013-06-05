@@ -1,10 +1,14 @@
-<h1>Delete Item</h1>
+{% extends "items/item_base.html" %}
+{%  block title %}Omnomer - Delete Item {% endblock %}
+{%  block main %}
+    <h1>Delete Item</h1>
 
-<p>Are you sure you want to delete the item {{ item }}?</p>
+    <p>Are you sure you want to delete the item {{ item }}?</p>
 
-<form action="{% url "item-delete" pk=item.id %}" method="POST">
-  {% csrf_token %}
+    <form action="{% url "item-delete" pk=item.id %}" method="POST">
+        {% csrf_token %}
 
-  <input type="submit" value="Yes, delete." />
-  <a href="{% url "items-list" %}">No, cancel.</a>
-</form>
+        <input type="submit" value="Yes, delete." />
+        <a href="{% url "items-list" %}">No, cancel.</a>
+    </form>
+{% endblock %}
