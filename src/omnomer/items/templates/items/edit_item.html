@@ -1,10 +1,10 @@
 {% extends "items/item_base.html" %}
-{%  block title %}Omnomer - Edit Item{% endblock %}
-{%  block main %}
+{%  block meta_title %}Omnomer - Edit Item{% endblock %}
+{%  block item_main %}
     {% if item.id %}
-        <h1>Edit Item</h1>
+        <h3>Edit Item</h3>
     {% else %}
-        <h1>Add Item</h1>
+        <h3>Add Item</h3>
     {% endif %}
 
     <form action="{{ action }}" method="POST">
