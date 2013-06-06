@@ -11,4 +11,7 @@ body {
 #main_div{
     background-color: #CADDAC;
     color: black;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }

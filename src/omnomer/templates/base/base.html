@@ -18,9 +18,11 @@
 {#            {% endif %}#}
 {#            </div>#}
 {#        </header>#}
-        <div id="header_div">{% block header %}{% include "base/header.html" %}{% endblock %}</div>
-        <div id="main_div">{% block main %}{% endblock %}</div>
-        <div id="footer_div">{% block footer %}{% include "base/footer.html" %}{% endblock %}</div>
+        <div class="container-fluid">
+            <div id="header_div">{% block header %}{% include "base/header.html" %}{% endblock %}</div>
+            <div id="main_div">{% block main %}{% endblock %}</div>
+            <div id="footer_div">{% block footer %}{% include "base/footer.html" %}{% endblock %}</div>
+        </div>
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 {#        {% browserid_js %}#}
