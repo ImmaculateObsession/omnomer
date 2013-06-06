@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {#{% load browserid %}#}
-<html>
+<html lang="en">
     <head>
         {% load staticfiles %}
         <title>{% block title %}Omnomer - Snap, Tag, Organize{% endblock %}</title>
         <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css">
+        <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" media="screen">
     </head>
     <body>
 {#        {% browserid_info %}#}
@@ -20,8 +21,8 @@
         <div id="header_div">{% block header %}{% include "base/header.html" %}{% endblock %}</div>
         <div id="main_div">{% block main %}{% endblock %}</div>
         <div id="footer_div">{% block footer %}{% include "base/footer.html" %}{% endblock %}</div>
-
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 {#        {% browserid_js %}#}
     </body>
 </html>
