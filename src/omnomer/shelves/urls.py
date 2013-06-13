@@ -5,7 +5,7 @@ from shelves.views import (
     CreateShelfView,
     EditShelfView,
     DeleteShelfView,
-    )
+)
 
 urlpatterns = patterns('',
     url(r'^list/', ListShelfView.as_view(), name='shelves-list'),

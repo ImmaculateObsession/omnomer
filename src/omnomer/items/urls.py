@@ -5,7 +5,7 @@ from items.views import (
     CreateItemView,
     EditItemView,
     DeleteItemView,
-    )
+)
 
 urlpatterns = patterns('',
     url(r'^list/', ListItemView.as_view(), name='items-list'),
