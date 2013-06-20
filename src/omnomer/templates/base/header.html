@@ -3,7 +3,8 @@
     <div class="navbar">
       <div class="navbar-inner">
         <ul class="nav">
-          <li class="active"><a href="/">Home</a></li>
+          {# ~todo~ determine how to check current url to set li class as "active"#}
+          <li><a href="{% url "home" %}">Home</a></li>
           <li><a href="{% url "shelves-list" %}">Shelves</a></li>
           <li><a href="{% url "items-list" %}">Items</a></li>
         </ul>
