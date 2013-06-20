@@ -5,10 +5,9 @@ from shelves.views import (
     CreateShelfView,
     EditShelfView,
     DeleteShelfView,
-    )
+)
 
 urlpatterns = patterns('',
-    url(r'^$', ListShelfView.as_view(), name='shelves-list'),
     url(r'^list/', ListShelfView.as_view(), name='shelves-list'),
     url(r'^create/', CreateShelfView.as_view(), name='shelf-create'),
     url(r'^edit/(?P<pk>\d+)/$', EditShelfView.as_view(), name='shelf-edit'),
