@@ -23,7 +23,7 @@ class CreateItemView(CreateView):
     template_name = template_dir + "edit_item.html"
 
     def get_success_url(self):
-        return reverse('items-list')
+        return reverse('item-list')
 
     def get_context_data(self, **kwargs):
 
@@ -38,7 +38,7 @@ class EditItemView(UpdateView):
     template_name = template_dir + 'edit_item.html'
 
     def get_success_url(self):
-        return reverse('items-list')
+        return reverse('item-list')
 
     def get_context_data(self, **kwargs):
 
@@ -53,4 +53,4 @@ class DeleteItemView(DeleteView):
     template_name = template_dir + 'item_delete.html'
 
     def get_success_url(self):
-        return reverse('items-list')
+        return reverse('item-list')
