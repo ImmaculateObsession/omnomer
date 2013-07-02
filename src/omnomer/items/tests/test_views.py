@@ -29,7 +29,7 @@ class ItemListViewTests(TestCase):
         self.assertEquals(list(response.context_data['object_list']), [])
 
         ItemFactory()
-        
+
         response = ListItemView.as_view()(request)
         self.assertEquals(response.context_data['object_list'].count(), 1)
 

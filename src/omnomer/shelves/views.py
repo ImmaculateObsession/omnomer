@@ -26,29 +26,27 @@ class CreateShelfView(CreateView):
         return reverse('shelf-list')
 
     def get_context_data(self, **kwargs):
-
         context = super(CreateShelfView, self).get_context_data(**kwargs)
         context['action'] = reverse('shelf-create')
 
         return context
 
-class EditShelfView(UpdateView):
 
+class EditShelfView(UpdateView):
     model = Shelf
     template_name = template_dir + 'edit_shelf.html'
 
     def get_success_url(self):
-        return reverse('shelves-list')
+        return reverse('shelf-list')
 
     def get_context_data(self, **kwargs):
-
         context = super(EditShelfView, self).get_context_data(**kwargs)
-        context['action'] = reverse('item-edit', kwargs={'pk': self.get_object().id})
+        context['action'] = reverse('shelf-edit', kwargs={'pk': self.get_object().id})
 
         return context
 
-class DeleteShelfView(DeleteView):
 
+class DeleteShelfView(DeleteView):
     model = Shelf
     template_name = template_dir + 'shelf_delete.html'
 
