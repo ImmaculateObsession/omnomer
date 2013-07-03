@@ -1,0 +1,23 @@
+{% extends "items/item_base.html" %}
+{%  block meta_title %}Omnomer - Item Detail{% endblock %}
+{%  block item_main %}
+    <h1>Item Details for {{ item.name }}</h1>
+
+    <h3>Value: {{ item.value }}</h3>
+
+    <h3>Owners</h3>
+    <ul>
+    {% if not item.owners %}
+        <li>(None)</li>
+    {% endif %}
+    {% for owner in item.owners %}
+        <li>{{ owner }}</li>
+    {% endfor %}
+    </ul>
+
+    {% if item.id %}
+        <a href="{% url "item-delete" pk=item.id %}">Delete</a> -
+    {% endif %}
+
+    <a href="{% url "item-list" %}">Back to List</a>
+{% endblock %}

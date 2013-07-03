@@ -17,6 +17,17 @@ class ListItemView(ListView):
     template_name = template_dir + "item_list.html"
 
 
+class DetailItemView(DetailView):
+
+    model = Item
+    template_name = template_dir + "item_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(DetailItemView, self).get_context_data(**kwargs)
+        context['action'] = reverse('item-detail', kwargs={'pk': self.get_object().id})
+        return context
+
+
 class CreateItemView(CreateView):
 
     model = Item
