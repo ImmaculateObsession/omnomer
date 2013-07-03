@@ -11,6 +11,12 @@ from shelves.models import Shelf
 
 template_dir = "shelves/"
 
+class MainShelfView(ListView):
+
+    model = Shelf
+    template_name = template_dir + "shelf_main.html"
+
+
 class ListShelfView(ListView):
 
     model = Shelf
