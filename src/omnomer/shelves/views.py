@@ -17,8 +17,18 @@ class ListShelfView(ListView):
     template_name = template_dir + "shelf_list.html"
 
 
-class CreateShelfView(CreateView):
+class DetailShelfView(DetailView):
+    model = Shelf
+    template_name = template_dir +"shelf_detail.html"
 
+    def get_context_data(self, **kwargs):
+        context = super(DetailShelfView, self).get_context_data(**kwargs)
+        context['action'] = reverse('shelf-detail', kwargs={'pk': self.get_object().id})
+
+        return context
+
+
+class CreateShelfView(CreateView):
     model = Shelf
     template_name = template_dir + "edit_shelf.html"
 

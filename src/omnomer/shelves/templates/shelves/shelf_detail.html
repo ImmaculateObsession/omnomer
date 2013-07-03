@@ -1,0 +1,29 @@
+{% extends "shelves/shelf_base.html" %}
+{%  block meta_title %}Omnomer - Shelf Detail{% endblock %}
+{%  block shelf_main %}
+    <h1>Shelf Details for {{ shelf.name }}</h1>
+
+    <h3>Owners</h3>
+    <ul>
+    {% if not shelf.owners %}
+        <li>(None)</li>
+    {% endif %}
+    {% for owner in shelf.owners %}
+        <li>{{ owner }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Items</h3>
+    <ul>
+    {% for item in shelf.items %}
+        <li>Name: {{ item.name }}<br>
+            Value: {{ item.value }}</li>
+        <br>
+    {% endfor %}
+    </ul>
+    {% if shelf.id %}
+        <a href="{% url "shelf-delete" pk=shelf.id %}">Delete</a> -
+    {% endif %}
+
+    <a href="{% url "shelf-list" %}">Back to List</a>
+{% endblock %}

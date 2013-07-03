@@ -18,5 +18,11 @@ class Shelf(TimeStampedModel):
 
         return reverse('shelf-detail', kwargs={'pk': self.id })
 
+    def __getattribute__(self, name):
+        if name == "items" or name == "owners":
+            return models.manager.Manager.__getattribute__(self, name).all()
+        else:
+            return models.manager.Manager.__getattribute__(self, name)
+
     #TODO:
     # pictures
