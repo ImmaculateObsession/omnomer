@@ -1,9 +1,9 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 
 from model_utils.models import TimeStampedModel
 from items.models import Item
-
 
 class Shelf(TimeStampedModel):
 
@@ -13,6 +13,10 @@ class Shelf(TimeStampedModel):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+
+        return reverse('shelf-detail', kwargs={'pk': self.id })
 
     #TODO:
     # pictures
