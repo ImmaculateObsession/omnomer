@@ -16,7 +16,7 @@ class Item(TimeStampedModel):
 
     def get_absolute_url(self):
 
-        return reverse('item-view', kwargs={'pk': self.id }) 
+        return reverse('item-detail', kwargs={'pk': self.id })
 
 
     #TODO:
